@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 0 5em;
-  height: 100vh;
+  align-items: center;
+  height: 80%;
 `;
 
 export const Navbar = styled.nav`
@@ -13,30 +13,50 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 1em 5em 0 5em;
+
   img {
     width: 5rem;
   }
 `;
 
-export const NavItem = styled.div``;
+export const NavItem = styled.div`
+  cursor: pointer;
+`;
+
+export const NavMenu = styled.span`
+  display: block;
+  width: 2rem;
+  height: 0.15rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+
+  &:nth-child(3) {
+    width: 1.3rem;
+  }
+`;
 
 export const Content = styled.div`
   background-image: url(${(props) => props.img}),
     linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.3) 300px,
-      rgba(255, 0, 0, 0) 400px
+      rgba(0, 0, 0, 0.3) 500px,
+      rgba(255, 0, 0, 0) 600px
     );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  /*background-color: rgba(0, 0, 0, 0.1);*/
   background-blend-mode: overlay;
+  height: 100vh;
 `;
 
 export const Description = styled.div`
-  width: 16.6rem;
+  /*display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;*/
+
+  width: 25rem;
 `;
 
 export const Rating = styled.div`

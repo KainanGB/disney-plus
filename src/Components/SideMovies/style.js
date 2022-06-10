@@ -4,7 +4,7 @@ export const Content = styled.div``;
 
 export const Title = styled.h1`
   font-size: 1.75rem;
-  font-weight: 500;
+  /*font-weight: 500;*/
   letter-spacing: 1px;
 `;
 
