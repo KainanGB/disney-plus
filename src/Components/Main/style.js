@@ -55,6 +55,7 @@ export const NavMenu = styled.span`
 
   &:nth-child(1) {
     transform: ${(props) => (props.open ? "rotate(133deg)" : "rotate(0)")};
+    transition: transform 1s;
   }
 
   &:nth-child(2) {
