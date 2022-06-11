@@ -13,8 +13,8 @@ export const SideBar = styled.nav`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
-
   z-index: 95;
+  padding-top: 1rem;
 
   @media (min-width: 860px) {
     display: none;
@@ -27,7 +27,7 @@ export const Title = styled.h1`
 
   position: absolute;
   left: 14.6rem;
-  top: 1.7rem;
+  top: 2.7rem;
 `;
 
 export const Cards = styled.div`
