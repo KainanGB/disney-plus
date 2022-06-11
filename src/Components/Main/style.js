@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 5em;
+  /*padding: 0 8em;*/
   align-items: center;
   height: 80%;
+
+  max-width: 1400px;
+
+  padding: 0 6em;
+  margin: 0 auto;
 
   overflow-y: hidden;
 
@@ -84,6 +89,8 @@ export const Content = styled.div`
   color: white;
   background-blend-mode: overlay;
   height: 100vh;
+
+  margin: 0 auto;
 `;
 
 export const Description = styled.div`
