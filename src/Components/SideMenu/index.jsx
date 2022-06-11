@@ -11,6 +11,7 @@ export function SideMenu({
 }) {
   return (
     <S.SideBar isShowing={isShowing}>
+      <S.Title>Movies</S.Title>
       <S.Cards>
         {movies.map((movie, index) => (
           <S.Card

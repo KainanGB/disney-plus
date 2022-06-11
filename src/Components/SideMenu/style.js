@@ -24,6 +24,10 @@ export const SideBar = styled.nav`
 export const Title = styled.h1`
   font-size: 1.75rem;
   letter-spacing: 1px;
+
+  position: absolute;
+  left: 14.6rem;
+  top: 1.7rem;
 `;
 
 export const Cards = styled.div`

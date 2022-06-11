@@ -5,6 +5,7 @@ export const Content = styled.div``;
 export const Title = styled.h1`
   font-size: 1.75rem;
   letter-spacing: 1px;
+  margin-left: 1.95rem;
 
   @media (max-width: 860px) {
     display: none;
@@ -14,7 +15,7 @@ export const Title = styled.h1`
 export const Cards = styled.div`
   width: 220px;
   height: 450px;
-  padding-right: 3em;
+  padding: 1em 3em 0 2em;
   overflow-y: scroll;
   overflow-x: hidden;
 
@@ -37,6 +38,12 @@ export const Card = styled.div`
 
   border-radius: 1rem;
   margin: 0 0 1.5em 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  transition: transform 1s;
 
   overflow: hidden;
   position: relative;
