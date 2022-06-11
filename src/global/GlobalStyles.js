@@ -7,8 +7,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
-
-
+    
+ 
     img {
       width: 100%;
       display: block;

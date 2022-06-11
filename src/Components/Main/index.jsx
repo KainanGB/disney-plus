@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SideMovies } from "../SideMovies";
+import { SideMenu } from "../SideMenu";
 import * as S from "./style.js";
 
 import imdb from "../../assets/IMDB-icon.png";
@@ -73,6 +74,7 @@ export function Main() {
       selected: false,
     },
   ]);
+  const [isShowing, setIsShowing] = useState(false);
 
   const handleSelected = (movie) => {
     //movies.find((movieIndex) => {
@@ -96,11 +98,30 @@ export function Main() {
   return (
     <S.Content img={currentMovie.background}>
       <S.Navbar>
-        <img src={disneyLogo} alt="" />
-        <S.NavItem>
-          <S.NavMenu></S.NavMenu>
-          <S.NavMenu></S.NavMenu>
-          <S.NavMenu></S.NavMenu>
+        <SideMenu
+          movies={movies}
+          isShowing={isShowing}
+          setIsShowing={setIsShowing}
+          handleBackGround={handleBackGround}
+        ></SideMenu>
+        <img src={disneyLogo} alt="disney logo" />
+        <S.NavItem
+          onClick={() => {
+            setIsShowing((prevState) => (prevState ? false : true));
+          }}
+        >
+          {isShowing ? (
+            <>
+              <S.NavMenu open></S.NavMenu>
+              <S.NavMenu open></S.NavMenu>
+            </>
+          ) : (
+            <>
+              <S.NavMenu></S.NavMenu>
+              <S.NavMenu></S.NavMenu>
+              <S.NavMenu></S.NavMenu>
+            </>
+          )}
         </S.NavItem>
       </S.Navbar>
       <S.Container>
@@ -110,8 +131,8 @@ export function Main() {
             <S.Span>{currentMovie.rating}</S.Span>
           </S.Rating>
           <S.labels>
-            <S.Span>2021</S.Span> - <S.Span>Kids</S.Span> -{" "}
-            <S.Span>Movie</S.Span>
+            <S.Span>2021</S.Span> - <S.Span>Kids</S.Span> -
+            <S.Span> Movie</S.Span>
           </S.labels>
           <S.Title>{currentMovie.title}</S.Title>
           <S.MovieDescription>{currentMovie.description}</S.MovieDescription>

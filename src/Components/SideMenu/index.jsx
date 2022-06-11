@@ -1,20 +1,24 @@
 import * as S from "./style.js";
 
 import playBtn from "../../assets/play-btn.svg";
+import { useState } from "react";
 
-export function SideMovies({ movies, handleClick, handleSelected }) {
+export function SideMenu({
+  movies,
+  isShowing,
+  setIsShowing,
+  handleBackGround,
+}) {
   return (
-    <S.Content>
-      <S.Title>Movies</S.Title>
+    <S.SideBar isShowing={isShowing}>
       <S.Cards>
         {movies.map((movie, index) => (
           <S.Card
-            className={movie.selected ? "selected" : ""}
             key={index}
             img={movie.background}
-            onClick={(e) => {
-              handleClick(movie.title);
-              handleSelected(movie.title);
+            onClick={() => {
+              setIsShowing((prevState) => (prevState ? false : true));
+              handleBackGround(movie.title);
             }}
           >
             <S.CardDescription img={playBtn}>
@@ -24,6 +28,6 @@ export function SideMovies({ movies, handleClick, handleSelected }) {
           </S.Card>
         ))}
       </S.Cards>
-    </S.Content>
+    </S.SideBar>
   );
 }
