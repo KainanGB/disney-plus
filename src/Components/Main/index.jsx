@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SideMovies } from "../SideMovies";
 import { SideMenu } from "../SideMenu";
 import * as S from "./style.js";
@@ -91,7 +91,9 @@ export function Main() {
 
   const handleBackGround = (movie) => {
     movies.find((movieIndex) => {
-      if (movieIndex.title === movie) setCurrentMovie(movieIndex);
+      if (movieIndex.title === movie) {
+        setCurrentMovie(movieIndex);
+      }
     });
   };
 

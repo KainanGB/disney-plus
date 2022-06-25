@@ -26,7 +26,7 @@ export const Title = styled.h1`
   letter-spacing: 1px;
 
   position: absolute;
-  left: 14.6rem;
+  right: 10.6rem;
   top: 2.7rem;
 `;
 

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  position: relative;
+  width: 300px;
+`;
 
 export const Title = styled.h1`
+  /*position: absolute;*/
   font-size: 1.75rem;
   letter-spacing: 1px;
   margin-left: 1.95rem;
+  margin-top: 3rem;
 
   @media (max-width: 860px) {
     display: none;
@@ -13,9 +18,8 @@ export const Title = styled.h1`
 `;
 
 export const Cards = styled.div`
-  width: 220px;
   height: 450px;
-  padding: 1em 3em 0 2em;
+  padding: 1em 3em 2em 2em;
   overflow-y: scroll;
   overflow-x: hidden;
 

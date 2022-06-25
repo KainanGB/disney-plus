@@ -29,6 +29,9 @@ export const Navbar = styled.nav`
   padding: 1em 5em 0 5em;
   z-index: 99;
 
+  max-width: 1400px;
+  margin: 0 auto;
+
   @media (max-width: 860px) {
     padding: 1em 2em 0 2em;
   }
